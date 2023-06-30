@@ -22,6 +22,21 @@ This project have two worth mentioning concept
 <p align="center">
   <img src="./ReadMe-Images/button-architecture.jpg">
 </p>
+The button in this project undergoes a transformation to morph from a hamburger button to a navigation close button. <br />
+Here's a brief explanation of the transformation:
+
+- Initially, the button consists of two horizontal lines representing the hamburger icon.
+- When the navigation menu is in the closed state, the lines transform to create an "X" shape, resembling a close button.
+- The first line rotates by 45 degrees clockwise and translates slightly to create the diagonal line of the "X".
+- The second line rotates by 45 degrees counterclockwise and translates slightly to form the other diagonal line of the "X".
+- Additionally, the second line is positioned slightly lower to create a visual distinction between the two lines.
+- This transformation gives the appearance of the button changing from a hamburger icon to a close icon, indicating the ability to open and close the navigation menu's visibility.
+
+This morphing effect provides a clear visual cue to the user, <br />
+allowing them to easily recognize and interact with the button <br />
+to toggle the navigation menu's visibility.
+
+
 
 # Concept 2: The Animation of the Navigation Bar
 The navigation bar in this project undergoes a transition from a hidden state to a visible state with the following transformations:
