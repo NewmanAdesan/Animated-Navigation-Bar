@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+
+/* BASE STYLES */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(#eafbff 0%,
+            #eafbff 50%,
+            #5290f9 50%,
+            #5290f9 100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Muli', sans-serif;
+
+    /* set font-family */
+}
+
+
+
+
+
+/* NAVIGATION STYLES */
+nav {
+    width: 350px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+
+    transition: width 0.6s linear;
+    overflow: hidden;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    opacity: 1;
+    transition: width 0.6s linear;
+}
+
+nav ul li {
+    transform: rotateY(0);
+    opacity: 1;
+    transition: transform 0.6s linear, opacity 0.6s linear;
+}
+
+nav ul li a {
+    margin: 0 10px;
+}
+
+
+
+
+/* NAVIGATION BUTTON STYLES */
+.icon {
+    width: 30px;
+    height: 30px;
+    border: 0;
+    background-color: #ffffff;
+
+    /* ensure icon will be on top of navigation links during collapse */
+    /* also serves as reference when positioning the click-me icon */
+    position: relative;
+}
+
+.icon .line {
+    width: 20px;
+    height: 2px;
+    background-color: #5290f9;
+    margin: 0 auto;
+
+    transition: transform 0.6s linear
+}
+
+.icon .line1 {
+    transform: rotate(45deg) translate(4px, 3px);
+}
+
+.icon .line2 {
+    transform: rotate(-45deg) translate(1.6px, -1px);
+    margin-top: 5px;
+}
+
+
+
+
+
+/****** SETTING UP THE TRANSITIONS ********/
+
+nav.close {
+    width: 80px;
+}
+
+nav.close ul {
+    width: 0;
+}
+
+nav.close ul li {
+    transform: rotateY(360deg);
+    opacity: 0;
+}
+
+nav.close ul li a {
+    /* ensures the hidden navigation links are unclickable */
+    pointer-events: none;
+}
+
+nav.close .icon .line1 {
+    transform: rotate(720deg);
+}
+
+nav.close .icon .line2 {
+    transform: rotate(-720deg);
+}
+
+
+
+
+/* CLICK-ME ICON STYLES */
+.click-me {
+    position: absolute;
+    z-index: 100;
+    opacity: 0;
+    transform: rotate(-45deg);
+    animation-name: click-me;
+    animation-duration: 2s;
+    animation-iteration-count: 5;
+}
+
+@keyframes click-me {
+    from {
+        top: 4.5rem;
+        left: 4.5rem;
+        opacity: 1;
+    }
+
+    to {
+        top: 1.5rem;
+        left: 1.5rem;
+        opacity: 1;
+    }
+}
