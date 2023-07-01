@@ -48,6 +48,22 @@ The navigation bar in this project undergoes a transition from a hidden state to
 - The navigation links content gradually fades out with an opacity transition over 0.6 seconds.
 - Each line of the button icon rotates by 720 degrees (equivalent to two full rotations) with a duration of 0.6 seconds.
 
+
+# Little Details that Matter
+1. during the collapse of the navigation bar, <br />
+we have to make sure the invisible links are not clickable. <br />
+therefore, we use the `pointer-event` property & set it to "none". <br />
+this makes the links not respond to click event. <br />
+
+<br />
+
+2. during the collapse of the navigation bar,<br />
+we have to ensure the button icon is layered above the links <br />
+therefore, we set the position property to "relative". <br />
+if this is not set, we may intend to click on the button icon meanwhile we are clicking on one of the links
+
+
+
 These coordinated transitions, each with a duration of 0.6 seconds, contribute to a cohesive and visually engaging transformation from a hidden navigation bar to a visible one, creating an intuitive and aesthetically pleasing user experience.
 
 
